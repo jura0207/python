@@ -1,0 +1,269 @@
+{
+    "openapi": "3.0.3",
+    "info": {
+        "info": "Cereals",
+        "version": "3.0"
+    },
+    "paths": {
+        "/all": {
+            "get": {
+                "summary": "Get all cereals from collection",
+                "description": "Returns all rows with all the cereals",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Fetch successfull",
+                        "schema": {
+                            "$ref": "#/definitions/Resource"
+                        }
+                    },
+                    "404": {
+                        "description": "Resource not found"
+                    }
+                }
+            }
+        },
+        "/one?id={id}": {
+            "get": {
+                "summary": "Get one cereal from collection by ID",
+                "description": "Returns one row of the cereal with the provided ID",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "ID of the resource",
+                        "required": true,
+                        "type": "integer",
+                        "format": "int"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Fetch successfull",
+                        "schema": {
+                            "$ref": "#/definitions/Resource"
+                        }
+                    },
+                    "400": {
+                        "description": "Invalid ID"
+                    },
+                    "404": {
+                        "description": "Resource not found"
+                    }
+                }
+            }
+        }, 
+        "/two": {
+            "get": {
+                "summary": "",
+                "description": "",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Fetch successfull",
+                        "schema": {
+                            "$ref": "#/definitions/Resource"
+                        }
+                    },
+                    "400": {
+                        "description": "Invalid ID"
+                    },
+                    "404": {
+                        "description": "Resource not found"
+                    }
+                }
+            }
+        },
+        "/three": {
+            "get": {
+                "summary": "",
+                "description": "",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Fetch successfull",
+                        "schema": {
+                            "$ref": "#/definitions/Resource"
+                        }
+                    },
+                    "400": {
+                        "description": "Invalid ID"
+                    },
+                    "404": {
+                        "description": "Resource not found"
+                    }
+                }
+            }
+        },
+        "/four": {
+            "get": {
+                "summary": "",
+                "description": "",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Fetch successfull",
+                        "schema": {
+                            "$ref": "#/definitions/Resource"
+                        }
+                    },
+                    "400": {
+                        "description": "Invalid ID"
+                    },
+                    "404": {
+                        "description": "Resource not found"
+                    }
+                }
+            }
+        },
+        "/specification": {
+            "get": {
+                "summary": "Get OpenAPI specification",
+                "description": "Returns OpenAPI specificaiton",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Fetch successfull",
+                        "schema": {
+                            "$ref": "#/definitions/Resource"
+                        }
+                    },
+                    "404": {
+                        "description": "Resource not found"
+                    }
+                }
+            }
+        },
+        "/postone": {
+            "post": {
+                "summary": "Insert one row to the collection",
+                "description": "Insert one row to the collection",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                    }
+                ],
+                "responses": {
+                    "201": {
+                        "description": "Insert successfull",
+                        "schema": {
+                            "$ref": "#/definitions/Resource"
+                        }
+                    },
+                    "400": {
+                        "description": "Invalid input"
+                    },
+                    "404": {
+                        "description": "Resource not found"
+                    }
+                }
+            }
+        },
+        "/putone?id={id}": {
+            "put": {
+                "summary": "Updates one row in the collection",
+                "description": "Updates one row in the collection",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "ID of the resource",
+                        "required": false,
+                        "type": "integer",
+                        "format": "int"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Insert successfull",
+                        "schema": {
+                            "$ref": "#/definitions/Resource"
+                        }
+                    },
+                    "400": {
+                        "description": "Invalid input"
+                    },
+                    "404": {
+                        "description": "Resource not found"
+                    }
+                }
+            }
+        },
+        "/deleteone?id={id}": {
+            "delete": {
+                "summary": "Deletes one row in the collection",
+                "description": "Deletes one row in the collection passed by ID",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "ID of the resource",
+                        "required": false,
+                        "type": "integer",
+                        "format": "int"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Insert successfull",
+                        "schema": {
+                            "$ref": "#/definitions/Resource"
+                        }
+                    },
+                    "400": {
+                        "description": "Invalid input"
+                    },
+                    "404": {
+                        "description": "Resource not found"
+                    }
+                }
+            }
+        }
+    }
+
+}
+
